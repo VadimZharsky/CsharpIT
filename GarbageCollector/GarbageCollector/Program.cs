@@ -17,11 +17,22 @@ namespace GarbageCollector
             
             
             Console.ReadKey();
+
+            int counter = 0;
+
+            while (counter < 10) 
+            {
+                ObjectCreator();
+                Console.WriteLine((double)GC.GetTotalMemory(true) / 1024);
+                Console.ReadKey();
+                counter++;
+            }
+
         }
         static void ObjectCreator()
         {
             List<SimpleClass> list = new List<SimpleClass>();
-            for (int i = 0; i < 500000; i++)
+            for (int i = 0; i < 50000000; i++)
             {
                 SimpleClass simple = new SimpleClass(ShowMessage);
                 
