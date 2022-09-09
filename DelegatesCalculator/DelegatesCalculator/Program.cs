@@ -12,11 +12,11 @@ namespace DelegatesCalculator
         static void Main(string[] args)
         {
             del _del = null;
-            Console.Write("input x: ");
+            Console.Write("input first number: ");
             double x = Convert.ToDouble(Console.ReadLine());
             Console.Write("input operator: ");
             char act = Convert.ToChar(Console.ReadLine());
-            Console.Write("input y: ");
+            Console.Write("input second number: ");
             double y = Convert.ToDouble(Console.ReadLine());
             ToCalculate(_del, x, y, act);
             Console.ReadKey();
